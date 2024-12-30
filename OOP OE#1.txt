@@ -1,0 +1,31 @@
+// Define the Hero class
+class Hero(val name: String, val role: String, val damageType: String) {
+    
+    // String representation of the hero
+    override fun toString(): String {
+        return "Hero(name='$name', role='$role', damageType='$damageType')"
+    }
+}
+
+// Function to initialize and describe the team
+fun describeTeam(heroes: List<Hero>) {
+    println("Your Mobile Legends Dream Team consists of:")
+    for (hero in heroes) {
+        println(hero)  // Calls the toString() method of Hero
+    }
+}
+
+fun main() {
+    // Create 5 hero objects
+    val hero1 = Hero("Alucard", "Fighter", "Physical")
+    val hero2 = Hero("Eudora", "Mage", "Magical")
+    val hero3 = Hero("Franco", "Tank", "Physical")
+    val hero4 = Hero("Layla", "Marksman", "Physical")
+    val hero5 = Hero("Angela", "Support", "Magical")
+
+    // Store the heroes in a list
+    val team = listOf(hero1, hero2, hero3, hero4, hero5)
+
+    // Print the description of the team
+    describeTeam(team)
+}
